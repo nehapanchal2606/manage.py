@@ -1,0 +1,47 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<body>
+<div class="content">
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-offset- col-lg- col-md- col-sm- col-xs-">
+                <div class="well-box">
+                    <div class="row">
+                        <div class="col-l9-11">
+                             <div class="signup-box">
+                                 <div class="signup-header" style="background-color:blue">
+                                     <h3>Blog Details</h3>
+                                     <p style="color:red">Description</p>
+                                 </div><br>
+
+                                    {% for val in b %}
+                                    <div class="form-group">
+                                        <div class="">{{val.id.title}}</div>
+                                    </div>
+                                    <div>
+                                        <h2 style="color:red"><th>{{val.title}}</th></h2>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:blue"><td>{{val.blog}}</td></h5>
+                                    </div>
+                                        <td><img src="{% static 'images/' %}{{val.img}}" height="200" width="200"></td>
+
+                                    </div>
+
+                                    {% endfor %}
+                             </div>
+                        </td>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    table,th,td{
+
+        border: 2px solid black;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+    <tr>
+        <th>Title</th>
+        <th>Blog</th>
+        <th>Image</th>
+        <th>actioon</th>
+    </tr>
+        {% for val in b %}
+    <tr>
+        <td>{{val.title}}</td>
+        <td>{{val.blog}}</td>
+        <td>{{val.img}}</td>
+        <td><a href="/edit/{{val.id}}" >Edit</a>
+            <a href="/delete/{{val.id}}">Delete</a>
+        </td>
+
+
+    </tr>
+        {% endfor %}
+
+
+</table>
+</body>
+</html>

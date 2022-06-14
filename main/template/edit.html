@@ -1,0 +1,55 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<body>
+<div class="content" style="background-color:#ff6357;">
+    <div class="content-area" style="color:Black;">
+        <div class="container">
+            <div class="row">
+               <div class="col-lg-offset-2 col-lg-4 col-md-4 col-sm-2 col-xs-2">
+                <div class="well-box">
+                    <div class="row">
+                        <div class="col-l9-11">
+                             <div class="signup-box">
+                                 <div class="signup-header">
+                                     <h3 style="color:Blue;">Add Blog</h3>
+                                 </div>
+
+                                    <form action="/update/{{b.id}}" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div>
+                                                <label style="color:black">Add Title</label>
+                                                <b><input type="text"  class="form-control" name="title" id="title" value="{{b.title}}"></b>
+                                        </div>
+
+                                        <div class="form-group">
+                                                <label>Add
+                                                Description</label>
+                                                <input type="text" class="form-control" name="blog" id="blog" value="{{b.blog}}">
+                                        </div>
+
+                                        <div>
+
+                                                <label>Add Image</label>
+                                                <input type="file" name="img" id="img" accept="images/*" value="{{b.image}}">
+                                        </div>
+                                        <br>
+                                        <tr>
+                                            <th>
+                                                <button type="submit" value="update">Edit</button>
+                                            </th>
+                                        </tr>
+
+
+                                    </form>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

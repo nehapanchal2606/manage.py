@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    table,th,td{
+
+        border: 2px solid black;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Contact</th>
+    </tr>
+        {% for val in u %}
+    <tr>
+        <td>{{val.first_name}}</td>
+        <td>{{val.last_name}}</td>
+        <td>{{val.username}}</td>
+        <td>{{val.email}}</td>
+        <td>{{val.password}}</td>
+        <td>{{val.contact}}</td>
+    </tr>
+        {% endfor %}
+</table>
+</body>
+</html>

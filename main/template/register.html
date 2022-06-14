@@ -1,0 +1,79 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<body>
+<div class="content" style="background-color:#ff6347;">
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-offset-1 col-lg-5 col-md-6 col-sm-3 col-xs-3">
+                <div class="well-box">
+                    <div class="row">
+                        <div class="col-lg-30">
+                             <div class="signup-box">
+                                 <div class="signup-header">
+                                     <h3 style="color:Blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register New Account</h3>
+                                 </div><br>
+                                 <div class="signup-form">
+                                            <form  method="post" action="/register/" class="needs-validation">
+                                                    {% csrf_token %}
+                                                    <div class="form-group">
+
+                                                            <label  style="color:black">First Name   :</label>
+                                                            <input style="border:2px solid black" type="text" class="form-control" name="first_name" placeholder="First Name">
+
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group">
+
+                                                            <label  style="color:black">Last Name    :</label>
+                                                            <input type="text" style="border:2px solid black" class="form-control" name="last_name" placeholder="Last Name">
+
+
+                                                    </div><br>
+                                                    <div class="form-group">
+
+                                                            <label style="color:black">User Name :</label>
+                                                            <input type="text"  class="form-control" style="border:2px solid black" name="username" placeholder="User Name">
+
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group">
+                                                            <label style="color:black">User Email :</label>
+                                                            <input style="border:2px solid black" type="email" class="form-control" name="email" placeholder="Email Address">
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group">
+                                                            <label  style="color:black">User Password :</label>
+                                                            <input style="border:2px solid black" type="password" class="form-control" name="password" placeholder="Password">
+
+                                                    </div><br>
+                                                    <div class="form-group">
+                                                            <label  style="color:black">User Contact :</label>
+                                                            <input  style="border:2px solid black" type="text"  class="form-control" name="contact" placeholder="Contact">
+                                                    </div>
+
+                                                    <div>
+                                                        <input type="submit" class="btn btn-default btn-lg" value="sign up">
+                                                    </div>
+                                                    <div>
+                                                   &nbsp;<p class="pull right" style="color:blue">Already registered?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login here <a href="/login/" class="btn btn-default btn-lg">Login</a></p>
+                                                    </div>
+                                                </form>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+{% endblock %}
+</html>

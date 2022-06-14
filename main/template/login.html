@@ -1,0 +1,56 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<body>
+<div class="content" style="background-color:#ff6357;">
+    <div class="content-area" style="color:Black;">
+        <div class="container">
+            <div class="row">
+               <div class="col-lg-offset-2 col-lg-4 col-md-4 col-sm-2 col-xs-2">
+                <div class="well-box">
+                    <div class="row">
+                        <div class="col-l9-11">
+                             <div class="signup-box">
+                                 <div class="signup-header">
+                                     <h3 style="color:Blue;">Login Your Account</h3>
+                                     <b>Just Enter Username and Password</b>
+                                 </div>
+                                 <br>
+                                 <br>
+
+                                <form method="post" action="/login/">
+                                    {% csrf_token %}
+                                    <table>
+                                    <div class="form-group">
+                                            <label style="color:black"><b>User Name :</b></label>
+                                            <input type="text" class="form-control" name="username" placeholder="User Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <div>
+                                            <label><b>Password :</b></label>
+                                            <input type="password" class="form-control" name="password" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <input type="submit"  class="btn btn-default btn-lg">
+                                        </div>
+                                    </div>
+
+
+                                    </table>
+
+                                </form>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+{% endblock %}
+</html>
